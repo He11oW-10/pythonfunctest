@@ -1,5 +1,6 @@
 import logging
-
+import numpy
+import scipy
 import azure.functions as func
 
 
