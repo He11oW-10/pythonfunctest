@@ -1,6 +1,7 @@
 import logging
 import numpy
 import scipy
+import time
 import azure.functions as func
 
 
@@ -8,6 +9,7 @@ def main(req: func.HttpRequest) -> func.HttpResponse:
     logging.info('Python HTTP trigger function processed a request.')
 
     name = req.params.get('name')
+    time.sleep(3600)
     if not name:
         try:
             req_body = req.get_json()
