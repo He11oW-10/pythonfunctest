@@ -1,6 +1,7 @@
 import logging
-import numpy
-import scipy
+#import numpy
+#import scipy
+import azure-storage-blob
 import azure.functions as func
 
 
