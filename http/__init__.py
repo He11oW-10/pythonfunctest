@@ -1,7 +1,7 @@
 import logging
 #import numpy
 #import scipy
-import azure-storage-blob
+from azure.storage.blob import BlobServiceClient, BlobClient
 import azure.functions as func
 
 
