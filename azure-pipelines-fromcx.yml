@@ -31,12 +31,12 @@ stages:
 
     steps:
     - task: ArchiveFiles@2
-      displayName: 'Archive files for Merge Function'
+      displayName: 'Archive files for Function'
       inputs:
-        rootFolderOrFile: '$(System.DefaultWorkingDirectory)/http'
+        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
         includeRootFolder: false
         archiveType: zip
-        archiveFile: $(Build.ArtifactStagingDirectory)/Merge$(Build.BuildId).zip
+        archiveFile: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         replaceExistingArchive: true
 
     - upload: $(Build.ArtifactStagingDirectory)/Merge$(Build.BuildId).zip
